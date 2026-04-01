@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinique Marion - Votre Santé, Notre Priorité</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <a href="mailto:contact@clinique-marion.com"><i class="fa-solid fa-envelope"></i>
+                        contact@clinique-marion.com</a>
+                </div>
+                <div class="emergency">
+                    <a href="contact.html#rendez-vous"><i class="fa-solid fa-calendar-check"></i> Prise de
+                        rendez-vous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Clinique Marion Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">ACCUEIL</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">QUI SOMMES-NOUS ? <i class="fa-solid fa-chevron-down hpsj-nav-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#mission">Notre Mission</a></li>
+                            <li><a href="about.html#valeurs">Nos Valeurs</a></li>
+                            <li><a href="about.html#chiffres">Nos Chiffres</a></li>
+                            <li><a href="candidature.html">Recrutement</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html">NOTRE OFFRE DE SOINS <i class="fa-solid fa-chevron-down hpsj-nav-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="medecine-generale.html">Médecine Générale</a></li>
+                            <li><a href="medecine-du-travail.html">Médecine du Travail</a></li>
+                            <li><a href="optique-marion.html">Optique Marion</a></li>
+                            <li><a href="ophtalmologie.html">Ophtalmologie</a></li>
+                            <li><a href="pediatrie.html">Pédiatrie</a></li>
+                            <li><a href="soins-dentaires.html">Soins Dentaires</a></li>
+                            <li><a href="chirurgie.html">Chirurgie</a></li>
+                            <li><a href="gynecologie.html">Gynécologie & Maternité</a></li>
+                            <li><a href="cardiologie.html">Cardiologie</a></li>
+                            <li><a href="laboratoire.html">Laboratoire</a></li>
+                            <li><a href="pharmacie.html">Pharmacie</a></li>
+                            <li><a href="urgences-24-24.html">Urgences 24/24</a></li>
+                            <li><a href="imagerie.html">Imagerie Médicale</a></li>
+                            <li><a href="kinesitherapie.html">Kinésithérapie</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="contact.html">CONTACT <i class="fa-solid fa-chevron-down hpsj-nav-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="contact.html#coordonnees">Nos Coordonnées</a></li>
+                            <li><a href="contact.html#rendez-vous">Prendre RDV</a></li>
+                            <li><a href="contact.html#recrutement">Recrutement</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html#rendez-vous" class="btn-primary">RENDEZ-VOUS</a></li>
+                </ul>
+                <button class="mobile-toggle" title="Menu Mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NEW SPLIT HERO LAYOUT -->
+    <section id="accueil" class="split-hero">
+        <div class="container split-hero-container">
+            <div class="split-hero-content">
+                <span class="badge">Santé & Excellence</span>
+                <h1>Prenez en main votre <br><span class="text-primary">santé avec nous</span></h1>
+                <p>La Clinique Marion vous offre une prise en charge médicale haut de gamme et personnalisée, avec des experts dévoués à votre bien-être.</p>
+                
+                <div class="hero-actions">
+                    <a href="contact.html#rendez-vous" class="btn-primary" title="Prendre un rendez-vous rapide">PRENDRE RENDEZ-VOUS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="btn-outline" title="Découvrir nos services">Nos Services</a>
+                </div>
+
+                <!-- Floating Search Box -->
+                <div class="floating-search">
+                    <div class="search-field">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <input type="text" placeholder="Rechercher une spécialité...">
+                    </div>
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            
+            <div class="split-hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/images/hero_surgeons.png" alt="Équipe Chirurgicale Clinique Marion">
+                    <div class="floating-card-stat">
+                        <div class="stat-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div>
+                            <h4>Disponibles 24/7</h4>
+                            <p>Urgences assurées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK ACCESS BAR -->
+    <section class="quick-access-bar">
+        <div class="container">
+            <div class="quick-access-grid">
+                <a href="contact.html#rendez-vous" class="qa-item">
+                    <i class="fa-solid fa-phone"></i> +242 06 808 808 00
+                </a>
+                <a href="services.html#chirurgie" class="qa-item">
+                    <i class="fa-solid fa-bed-pulse"></i> Service d'urgences
+                </a>
+                <a href="services.html#maternite" class="qa-item">
+                    <i class="fa-solid fa-plus-square"></i> Les + de Marion
+                </a>
+                <a href="contact.html#recrutement" class="qa-item">
+                    <i class="fa-solid fa-briefcase"></i> Espace Recrutement
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENTO PROMOTIONS (NOS PACKS) -->
+    <section class="bento-section">
+        <div class="container">
+            <div class="section-title-left">
+                <h2>Les <span>+ de Marion</span></h2>
+                <p>Prise en charge des EVASAN, location ambulances, cartes de consultation prépayée, packs de soins adaptés à tous les budgets.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Large Item -->
+                <div class="bento-item bento-large">
+                    <div class="bento-img">
+                        <img src="assets/images/clinic_building.png" alt="Les + de Marion">
+                    </div>
+                    <div class="bento-content">
+                        <h3>Packs de Soins Santé</h3>
+                        <p>Des packs de soins adaptés à tous les budgets pour une couverture familiale et prénatale optimale.</p>
+                        <a href="contact.html" class="btn-primary mt-3">En savoir plus <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Small Items -->
+                <div class="bento-small-group">
+                    <div class="bento-item bento-small">
+                        <div class="bento-content">
+                            <i class="fa-solid fa-glasses bento-icon"></i>
+                            <h3>Optique Marion</h3>
+                            <p>Des opticiens et stylistes experts, un accompagnement personnalisé, un large choix de lunettes et de montures.</p>
+                            <a href="services.html" class="bento-link">Découvrir</a>
+                        </div>
+                    </div>
+                    <div class="bento-item bento-small bento-accent">
+                        <div class="bento-content">
+                            <i class="fa-solid fa-clock bento-icon"></i>
+                            <h3>Administration</h3>
+                            <p>Lundi au vendredi : 7h30 – 12h et 14h30 – 17h30<br>Samedi : 7h30 – 14h30</p>
+                            <a href="contact.html" class="bento-link">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Z-PATTERN EXPERTISES -->
+    <section class="z-pattern-section bg-light">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Nos <span>Expertises</span></h2>
+                <p>Découvrez l'étendue de nos services médicaux spécialisés.</p>
+            </div>
+            
+            <!-- Row 1 -->
+            <div class="z-row">
+                <div class="z-image">
+                    <img src="assets/images/service_imaging.jpg" alt="Imagerie Médicale">
+                </div>
+                <div class="z-content">
+                    <span class="z-label">24h/24</span>
+                    <h3>Imagerie Médicale</h3>
+                    <p>Un plateau d’imagerie moderne et accessible 24h/24.</p>
+                    <a href="imagerie.html" class="btn-outline mt-3">VOIR PLUS <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Row 2 (Reversed) -->
+            <div class="z-row z-reversed">
+                <div class="z-image">
+                    <img src="assets/images/service_surgery.png" alt="Bloc Opératoire">
+                </div>
+                <div class="z-content">
+                    <span class="z-label">Urgence & Sécurité</span>
+                    <h3>Chirurgie</h3>
+                    <p>Chirurgie réparatrice – Maxilo-faciale – Service d’urgences.</p>
+                    <a href="chirurgie.html" class="btn-primary mt-3">VOIR PLUS <i class="fa-solid fa-calendar-day"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASONRY REALISATIONS GALERIE -->
+    <section class="masonry-section">
+        <div class="container">
+            <div class="section-title-left">
+                <h2>Nos <span>Installations</span></h2>
+                <p>Découvrez l'environnement dans lequel nous prenons soin de vous.</p>
+            </div>
+            
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <img src="assets/images/clinic_building.png" alt="Le Complexe Clinique Marion">
+                    <div class="masonry-overlay">
+                        <h4>Le Complexe Clinique</h4>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/images/service_maternity.jpg" alt="Chambres Maternité">
+                    <div class="masonry-overlay">
+                        <h4>Chambres Maternité</h4>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/images/service_lab.jpg" alt="Laboratoire d'analyses">
+                    <div class="masonry-overlay">
+                        <h4>Pôle Laboratoire</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Featured Action -->
+            <div class="featured-action-bar mt-5">
+                <div class="row-flex">
+                    <div class="text">
+                        <h3>Prêt à nous confier votre santé ?</h3>
+                        <p>Nos spécialistes sont à votre écoute pour une consultation complète.</p>
+                    </div>
+                    <div class="action">
+                        <a href="contact.html" class="btn-primary btn-lg">Contactez-nous aujourd'hui</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (HPSJ) -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="hpsj-content-container">
+                <div class="footer-widgets-grid">
+                    <!-- Column 1: Info -->
+                    <div class="footer-widget">
+                        <img src="logo.png" alt="Clinique Marion" class="footer-logo">
+                        <p class="footer-description">
+                            La Clinique Marion est un établissement de santé pluridisciplinaire de référence à Pointe-Noire, offrant des soins d'excellence dans un environnement moderne et sécurisé.
+                        </p>
+                    </div>
+
+                    <!-- Column 2: Useful Links -->
+                    <div class="footer-widget">
+                        <h4>LIENS UTILES</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">Qui sommes-nous ?</a></li>
+                            <li><a href="services.html">Offre de soins</a></li>
+                            <li><a href="candidature.html">Recrutement</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Contact Info -->
+                    <div class="footer-widget">
+                        <h4>CONTACT</h4>
+                        <ul class="footer-contact-list">
+                            <li class="footer-contact-item" id="urgences"><i class="fa-solid fa-phone footer-contact-icon"></i> +242 06 808 808 00</li>
+                            <li class="footer-contact-item"><i class="fa-solid fa-envelope footer-contact-icon"></i> contact@clinique-marion.com</li>
+                            <li class="footer-contact-item"><i class="fa-solid fa-location-dot footer-contact-icon"></i> <a href="https://maps.app.goo.gl/x6rLCXh2fGWkTexA6" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Avenue de l’indépendance n°490</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Social -->
+                    <div class="footer-widget">
+                        <h4>SUIVEZ-NOUS</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/CliniqueMarion/" class="social-icon" target="_blank" rel="noopener" title="Suivez-nous sur Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/cliniquemarion_/" class="social-icon" target="_blank" rel="noopener" title="Suivez-nous sur Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="hpsj-content-container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Clinique Marion - Tous droits réservés.</p>
+                    <a href="#accueil" class="back-to-top">RETOUR EN HAUT <i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

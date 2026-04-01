@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS clinique_marion;
+USE clinique_marion;
+
+CREATE TABLE IF NOT EXISTS messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    telephone VARCHAR(50),
+    message TEXT NOT NULL,
+    date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

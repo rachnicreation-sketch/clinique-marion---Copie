@@ -1,0 +1,22 @@
+<?php
+$host = 'localhost';
+$db   = 'clinique_marion';
+$user = 'root';
+$pass = ''; // Default WAMP password is empty
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERR_MODE            => PDO::ERR_MODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+     $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+     // For production, log error and show generic message
+     // throw new \PDOException($e->getMessage(), (int)$e->getCode());
+     die(json_encode(['status' => 'error', 'message' => 'Erreur de connexion à la base de données.']));
+}
+?>
