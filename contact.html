@@ -225,6 +225,103 @@
         </div>
     </footer>
 
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Message</h3>
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="btn-primary">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gestionnaire de soumission du formulaire de contact
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.hpsj-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Empêcher la soumission normale
+                    
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    
+                    // Désactiver le bouton et changer le texte
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'ENVOI EN COURS...';
+                    
+                    // Collecter les données du formulaire
+                    const formData = new FormData(contactForm);
+                    
+                    // Envoyer via AJAX
+                    fetch('process_form.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            showModal('Message envoyé avec succès !', data.message, 'success');
+                            contactForm.reset(); // Vider le formulaire
+                        } else {
+                            showModal('Erreur', data.message, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erreur:', error);
+                        showModal('Erreur', 'Une erreur inattendue s\'est produite. Veuillez réessayer.', 'error');
+                    })
+                    .finally(() => {
+                        // Réactiver le bouton
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalText;
+                    });
+                });
+            }
+        });
+
+        // Fonction pour afficher la modal
+        function showModal(title, message, type = 'info') {
+            const modal = document.getElementById('messageModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const modalContent = modal.querySelector('.modal-content');
+            
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            
+            // Changer la couleur selon le type
+            modalContent.className = 'modal-content';
+            if (type === 'success') {
+                modalContent.classList.add('modal-success');
+            } else if (type === 'error') {
+                modalContent.classList.add('modal-error');
+            }
+            
+            modal.style.display = 'block';
+        }
+
+        // Fonction pour fermer la modal
+        function closeModal() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+
+        // Fermer la modal en cliquant en dehors
+        window.onclick = function(event) {
+            const modal = document.getElementById('messageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -3094,3 +3094,117 @@ img {
     padding: 0.35rem 0.8rem;
     border-radius: 50px;
 }
+
+/* =========================================================================
+   MODAL STYLES
+   ========================================================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: var(--bg-white);
+    margin: 15% auto;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: var(--shadow-card);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-success .modal-header {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+}
+
+.modal-error .modal-header {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+}
+
+.modal-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.modal-body {
+    padding: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
+    text-align: right;
+    background-color: var(--bg-light);
+}
+
+.modal-footer .btn-primary {
+    margin: 0;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 20px;
+    }
+}
